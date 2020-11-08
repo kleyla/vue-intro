@@ -75,3 +75,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 npm install vue-resouce
 ```
+
+- Custom directives
+- Filters
+
+  Filters and custom directive tambien pueden ser locales, es decir en una solo en un componente
+
+- Mixins
