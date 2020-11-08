@@ -35,3 +35,10 @@ npm run lint
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Practicing
+
+- Props
+- Primitive vs Reference types
+- Event (child to parents)
+- Events Bus

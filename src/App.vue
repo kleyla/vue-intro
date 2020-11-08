@@ -1,8 +1,12 @@
 <template>
   <div id="app">
-    <app-header></app-header>
-    <Friends></Friends>
-    <app-footer></app-footer>
+    <app-header
+      v-bind:title="title"
+      v-on:changeTitleParent="upadateTitle($event)"
+    ></app-header>
+    <Friends v-bind:friends="friends"></Friends>
+    <Friends v-bind:friends="friends"></Friends>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
@@ -19,6 +23,23 @@ export default {
     "app-header": Header,
     "app-footer": Footer,
     Friends,
+  },
+  data() {
+    return {
+      friends: [
+        { name: "Andrea", speciality: "React js", show: false },
+        { name: "Rocio", speciality: "Laravel js", show: false },
+        { name: "Yol", speciality: "Angular js", show: false },
+        { name: "Daniel", speciality: "React js", show: false },
+        { name: "Juan", speciality: "Vue js", show: false },
+      ],
+      title: "Vue js",
+    };
+  },
+  methods: {
+    upadateTitle: function(updatedTitle) {
+      this.title = updatedTitle;
+    },
   },
 };
 </script>

@@ -10,23 +10,27 @@
         <h3 v-show="friend.show">{{ friend.speciality }}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteFriend">Delete friend</button>
   </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            friends: [
-                {name: 'Andrea', speciality:"React js", show: false},
-                {name: 'Rocio', speciality:"Laravel js", show: false},
-                {name: 'Yol', speciality:"Angular js", show: false},
-                {name: 'Daniel', speciality:"React js", show: false},
-                {name: 'Juan', speciality:"Vue js", show: false},
-            ]
-        }
+  props: {
+    friends: {
+      type: Array,
+      required: true,
     },
-}
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    deleteFriend: function() {
+      this.friends.pop();
+    },
+  },
+};
 </script>
 
 <style scoped>
