@@ -30,6 +30,24 @@ export default {
       this.friends.pop();
     },
   },
+  // beforeCreate() {
+  //   alert("Before create!");
+  // },
+  // created() {
+  //   alert("Created!");
+  // },
+  // beforeMount() {
+  //   alert("Before Mount");
+  // },
+  // mounted() {
+  //   alert("Mounted");
+  // },
+  // beforeUpdate() {
+  //   alert("Before update");
+  // },
+  // updated() {
+  //   alert("updated");
+  // },
 };
 </script>
 

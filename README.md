@@ -42,3 +42,30 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Primitive vs Reference types
 - Event (child to parents)
 - Events Bus
+- Life-cycle hooks
+
+### Life cycle hooks
+
+```javascript
+  beforeCreate() {
+    alert("Before create!");
+  },
+  created() {
+    alert("Created!");
+  },
+  beforeMount() {
+    alert("Before Mount");
+  },
+  mounted() {
+    alert("Mounted");
+  },
+  beforeUpdate() {
+    alert("Before update");
+  },
+  updated() {
+    alert("updated");
+  },
+```
+
+- Slots
+- Dynamic components
