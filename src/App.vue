@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <app-header
       v-bind:title="title"
       v-on:changeTitleParent="upadateTitle($event)"
