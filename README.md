@@ -69,3 +69,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 - Slots
 - Dynamic components
+
+### HTTP request
+
+```
+npm install vue-resouce
+```
