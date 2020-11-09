@@ -10,7 +10,7 @@
       <router-link v-bind:to="'/blog/' + blog.id">
         <h2 v-rainbow>{{ blog.title | toUppercase }}</h2></router-link
       >
-      <article>{{ blog.body | snipped }}</article>
+      <article>{{ blog.content | snipped }}</article>
     </div>
   </div>
 </template>
@@ -27,10 +27,22 @@ export default {
   },
   created() {
     this.$http
-      .get("https://jsonplaceholder.typicode.com/posts")
+      .get("https://vue-app-d4e37.firebaseio.com/post.json")
       .then(function(data) {
-        // console.log(data);
-        this.blogs = data.body.slice(0, 10);
+        // console.log(data.json());
+        // this.blogs = data.body.slice(0, 10);
+        return data.json();
+      })
+      .then(function(data) {
+        var blogsArray = [];
+        for (let key in data) {
+          // console.log(key);
+          // console.log(data[key]);
+          data[key].id = key;
+          blogsArray.push(data[key]);
+        }
+        // console.log(blogsArray);
+        this.blogs = blogsArray;
       });
   },
   computed: {
