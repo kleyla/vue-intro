@@ -82,3 +82,12 @@ npm install vue-resouce
   Filters and custom directive tambien pueden ser locales, es decir en una solo en un componente
 
 - Mixins
+
+## Routing
+
+```
+npm install vue-router --save
+```
+
+- Hash vs History
+- Routes parameters

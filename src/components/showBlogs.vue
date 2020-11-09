@@ -7,7 +7,9 @@
       v-for="(blog, index) in filterdBlogs"
       v-bind:key="index"
     >
-      <h2 v-rainbow>{{ blog.title | toUppercase }}</h2>
+      <router-link v-bind:to="'/blog/' + blog.id">
+        <h2 v-rainbow>{{ blog.title | toUppercase }}</h2></router-link
+      >
       <article>{{ blog.body | snipped }}</article>
     </div>
   </div>
